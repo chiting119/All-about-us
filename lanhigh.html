@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>More about me in high school</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      color: #111;
+    }
+
+    /* 上方導覽列 */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 40px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: orange;
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .nav-links a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: black;
+      font-size: 18px;
+    }
+
+    .nav-links a:hover {
+      color: orange;
+    }
+
+    /* 主內容 */
+    .main {
+      width: 85%;
+      margin: 40px auto;
+    }
+
+    .main h1 {
+      font-size: 72px;
+      margin-bottom: 50px;
+    }
+
+    .subtitle {
+      font-size: 24px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    /* 卡片區 */
+    .card-container {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #e9e9e9;
+      width: 280px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 22px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 8px 16px;
+      border: 3px solid black;
+      border-radius: 999px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      background-color: white;
+    }
+
+    .card h2 {
+      font-size: 22px;
+      margin: 10px 0 15px 0;
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 14px 28px;
+      background-color: orange;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .back-btn:hover {
+      background-color: darkorange;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo"><span>●</span>蘭嶼節</div>
+
+    <div class="nav-links">
+      <a href="allaboutus.html">Home</a>
+      <a href="lan.html">About</a>
+      <a href="lanhigh.html">High School</a>
+    </div>
+  </div>
+
+  <div class="main">
+    <h1>High School Life</h1>
+    <div class="subtitle">My experiences and growth in high school</div>
+
+    <div class="card-container">
+
+      <div class="card">
+        <img src="chifangairplane.png" alt="Academic">
+        <div class="card-content">
+          <div class="tag">Academic</div>
+          <h2>Academic Growth</h2>
+          <p>
+            在高中三年中，我持續培養自己的學習能力，
+            並在課業上努力精進，建立更扎實的分析與思考能力。
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="chifangairplane.png" alt="Leadership">
+        <div class="card-content">
+          <div class="tag">Activity</div>
+          <h2>Leadership and Teamwork</h2>
+          <p>
+            透過參與社團與校內活動，我學會如何與他人合作，
+            也提升了溝通、組織與帶領團隊的能力。
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="chifangairplane.png" alt="Skills">
+        <div class="card-content">
+          <div class="tag">Skill</div>
+          <h2>Technology and Interests</h2>
+          <p>
+            我對科技管理與程式設計有濃厚興趣，
+            也在高中階段逐漸探索自己未來想發展的方向。
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="person1.html" class="back-btn">← Back</a>
+  </div>
+
+</body>
+</html>

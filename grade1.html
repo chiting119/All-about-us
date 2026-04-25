@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshman Year Activities</title>
+    <style>
+        /* 字體與基礎設定 */
+        body {
+            font-family: "Segoe UI", Arial, "Microsoft JhengHei", sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #4da3ff;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #4da3ff;
+            display: inline-block;
+            margin: 40px 0 20px 0;
+            font-size: 1.8rem;
+        }
+
+        /* 活動卡片通用樣式 */
+        .activity-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        /* 圖片排版系統 */
+        .photo-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        /* 一張照片：4:3 */
+        /* 修改一張照片的排版：縮小寬度並置中 */
+        .grid-1 {
+            display: block; /* 改為區塊模式 */
+            max-width: 60%; /* 設定最大寬度為 60%，你可以根據喜好改成 50% 或 70% */
+            margin: 0 auto 25px auto; /* 上下邊距、左右自動置中 */
+        }
+
+            .grid-1 .photo-box {
+                aspect-ratio: 4 / 3; /* 維持你想要的 4:3 比例 */
+                width: 100%;
+            }
+
+
+        /* 兩張照片：並排 */
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        /* 三張照片：並排 */
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .photo-box {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+            .photo-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        /* 大標樣式  */
+        .activity-label {
+            display: inline-block;
+            font-size: 2.0rem;
+            font-weight: bold;
+            border: none;
+            padding: 0;
+            margin-bottom: 15px;
+            color: #1a365d;
+            background:none;
+            font-family: "標楷體", DFKai-SB,serif;
+            letter-spacing: 4px;
+        }
+
+        /* 內文簡介 */
+        .activity-desc {
+            text-align: left;
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 15px;
+            font-family: "標楷體", DFKai-SB,serif;
+        }
+
+        /* 特殊樣式：最後一張合照 (無內文) */
+        .no-desc {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="All about us.html" class="back-btn">← Back</a>
+
+        <h1>My Freshman Year Activities</h1>
+
+        <h2 class="section-title">班級活動</h2>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-2">
+                <div class="photo-box"><img src="civic1.jpg" alt="公民訓練1"></div>
+                <div class="photo-box"><img src="civic2.jpg" alt="公民訓練2"></div>
+            </div>
+            <div class="activity-label">公民訓練</div>
+            <div class="activity-desc">
+                開學一個禮拜後，我們就一起參加了公訓。在大家彼此還不太熟悉的情況下，一同闖關為班級爭取榮耀，也透過這次活動增進了彼此之間的感情
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-3">
+                <div class="photo-box"><img src="fair1.jpg" alt="校慶1"></div>
+                <div class="photo-box"><img src="fair2.jpg" alt="校慶2"></div>
+                <div class="photo-box"><img src="fair3.jpg" alt="校慶3"></div>
+            </div>
+            <div class="activity-label">校慶</div>
+            <div class="activity-desc">
+                高一的校慶是最精彩、最熱血的一次活動。從籌備班級攤位到參加大隊接力比賽，每個人都為了班級努力，讓我深刻感受到大家的團結與良好的班級氣氛。不僅大隊接力獲得第一名，我們的攤位也賺到了不少錢
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-1">
+                <div class="photo-box"><img src="xmas.jpg" alt="聖誕活動"></div>
+            </div>
+            <div class="activity-label">聖誕交換禮物</div>
+            <div class="activity-desc">
+                在聖誕節時，我們班舉辦了聖誕交換禮物活動，讓大家在節日氣氛中一起同樂
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-1">
+                <div class="photo-box"><img src="final_class.jpg" alt="106最後合照"></div>
+            </div>
+            <div class="activity-label">106最後一張合照</div>
+            <div class="activity-desc">
+                在 106 上課的最後一天，我們一起拍下最後一張合照，為這精彩的一年劃下句點
+            </div>
+        </div>
+
+        <h2 class="section-title">社團活動</h2>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-2">
+                <div class="photo-box"><img src="club_new1.jpg" alt="社團迎新1"></div>
+                <div class="photo-box"><img src="club_new2.jpg" alt="社團迎新2"></div>
+            </div>
+            <div class="activity-label">社團校外迎新</div>
+            <div class="activity-desc">
+                這是社團每年固定舉辦的活動，會和幾所學校一起進行闖關活動，藉此增進彼此之間的交流與感情
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-2">
+                <div class="photo-box"><img src="cadre1.jpg" alt="上幹照片1"></div>
+                <div class="photo-box"><img src="cadre2.jpg" alt="上幹照片2"></div>
+            </div>
+            <div class="activity-label">我們上幹了！</div>
+            <div class="activity-desc">
+                高一下還有一個重要的任務，就是決定自己是否要擔任幹部繼續留在社團。在猶豫了一段時間後，我認為應該讓自己多累積一些經驗，也嘗試克服面試的恐懼，最後順利成為了社團幹部
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

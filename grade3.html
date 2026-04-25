@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Year Survival</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, "Microsoft JhengHei", sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 40px 10px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Back 鍵置左 */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #4da3ff;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* 24格照片網格 */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .photo-box {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            background-color: #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+        }
+
+            .photo-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        /* 中間文字區域：無框、無底色 */
+        .center-content {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 30px 0;
+            margin: 10px 0;
+        }
+
+        /* 大標題：深藏藍、標楷體、無框 */
+        .activity-label {
+            display: inline-block;
+            font-family: "標楷體", "DFKai-SB", serif;
+            font-size: 2rem; /* 標楷體建議大一點比較好看 */
+            font-weight: bold;
+            color: #1a365d; /* 深藏藍 */
+            background: none; /* 無底色 */
+            border: none; /* 無外框 */
+            padding: 0;
+            margin-bottom: 15px;
+            letter-spacing: 4px; /* 字距拉開更有質感 */
+        }
+
+        .activity-desc {
+            text-align: left;
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 15px;
+            font-family: "標楷體", DFKai-SB,serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="All about us.html" class="back-btn">← Back to Journey</a>
+
+        <h1>My Senior Year: The Grind</h1>
+
+        <div class="activity-card">
+            <div class="photo-grid">
+
+                <div class="photo-box"><img src="exam1.jpg" alt="1"></div>
+                <div class="photo-box"><img src="exam2.jpg" alt="2"></div>
+                <div class="photo-box"><img src="exam3.jpg" alt="3"></div>
+                <div class="photo-box"><img src="exam4.jpg" alt="4"></div>
+                <div class="photo-box"><img src="exam5.jpg" alt="5"></div>
+                <div class="photo-box"><img src="exam6.jpg" alt="6"></div>
+                <div class="photo-box"><img src="exam7.jpg" alt="7"></div>
+                <div class="photo-box"><img src="exam8.jpg" alt="8"></div>
+                <div class="photo-box"><img src="exam9.jpg" alt="9"></div>
+                <div class="photo-box"><img src="exam10.jpg" alt="10"></div>
+                <div class="photo-box"><img src="exam11.jpg" alt="11"></div>
+                <div class="photo-box"><img src="exam12.jpg" alt="12"></div>
+
+                <div class="center-content">
+                    <div class="activity-label">被考卷題本堆滿的那年冬天</div>
+                    <div class="activity-desc">
+                        高三沒幹嘛，每天就是瘋狂讀書讀書再讀書，還有寫不完的題本跟考卷。段考考完考模考，模考考完考段考，娛樂活動減少了許多。這種生活持續了半年，雖然那段日子很辛苦，不過看到最後的結果，就覺得一切辛苦都值得了
+                    </div>
+                </div>
+
+                <div class="photo-box"><img src="exam13.jpg" alt="13"></div>
+                <div class="photo-box"><img src="exam14.jpg" alt="14"></div>
+                <div class="photo-box"><img src="exam15.jpg" alt="15"></div>
+                <div class="photo-box"><img src="exam16.jpg" alt="16"></div>
+                <div class="photo-box"><img src="exam17.jpg" alt="17"></div>
+                <div class="photo-box"><img src="exam18.jpg" alt="18"></div>
+                <div class="photo-box"><img src="exam19.jpg" alt="19"></div>
+                <div class="photo-box"><img src="exam20.jpg" alt="20"></div>
+                <div class="photo-box"><img src="exam21.jpg" alt="21"></div>
+                <div class="photo-box"><img src="exam22.jpg" alt="22"></div>
+                <div class="photo-box"><img src="exam23.jpg" alt="23"></div>
+                <div class="photo-box"><img src="exam24.jpg" alt="24"></div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

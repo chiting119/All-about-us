@@ -1,0 +1,550 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #7b68ee;
+    --text-color: #333;
+    --light-bg: #f8f9fa;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 頁頭樣式 */
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* 主容器 */
+main {
+    margin: 40px 0;
+}
+
+/* 網格布局 */
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* 卡片樣式 */
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* 圖片容器 */
+.profile-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover .profile-image {
+    transform: scale(1.05);
+}
+
+.profile-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(74, 144, 226, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-card:hover .profile-overlay {
+    opacity: 1;
+}
+
+.profile-overlay p {
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 卡片內容 */
+.profile-card h2 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin: 20px 20px 10px 20px;
+}
+
+.intro-text {
+    color: #666;
+    margin: 0 20px 20px 20px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* 按鈕樣式 */
+.btn-learn-more {
+    display: inline-block;
+    margin: 0 20px 20px 20px;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-learn-more:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
+}
+
+/* 頁尾樣式 */
+footer {
+    text-align: center;
+    color: white;
+    padding: 30px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 0.9;
+}
+
+/* 詳細頁面樣式 */
+.detail-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin: 40px 0;
+}
+
+.detail-image {
+    flex: 0 0 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-hover);
+}
+
+.detail-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.detail-content {
+    flex: 1;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.detail-content h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.detail-content h3 {
+    font-size: 1.4em;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.detail-content p {
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-badge {
+    background: var(--light-bg);
+    color: var(--primary-color);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border: 2px solid var(--primary-color);
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 10px 25px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.back-button:hover {
+    transform: translateX(-5px);
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .profiles-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .detail-image {
+        flex: 1;
+        width: 100%;
+    }
+
+    .detail-content {
+        padding: 20px;
+    }
+
+    .detail-content h2 {
+        font-size: 1.8em;
+    }
+}
+
+.intro-section {
+    margin-bottom: 40px;
+}
+
+.intro-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.avatar-wrapper {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid white;
+    box-shadow: var(--shadow-hover);
+    flex-shrink: 0;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-text-block h2 {
+    color: var(--primary-color);
+    font-size: 2.4em;
+    margin-bottom: 10px;
+}
+
+.intro-text-block {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+}
+
+.intro-text-block .role {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.cards-section h3 {
+    color: white;
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    display: block;
+    text-decoration: none;
+    background: white;
+    border: 2px solid transparent;
+    border-radius: 24px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    text-align: left;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.info-card:hover,
+.info-card.active {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-summary h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.card-summary p {
+    color: #666;
+    font-size: 0.95em;
+}
+
+.card-detail {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.info-card.active .card-detail {
+    max-height: 200px;
+    opacity: 1;
+}
+
+.hero-actions {
+    margin-top: 25px;
+}
+
+body.self-page {
+    background: #000;
+    color: #f4f4f4;
+}
+
+body.self-page header {
+    background: transparent;
+    color: #f4f4f4;
+}
+
+body.self-page .subtitle {
+    color: #cccccc;
+}
+
+body.self-page .intro-card {
+    background: #101010;
+    border: 1px solid #333;
+}
+
+body.self-page .intro-text-block {
+    background: rgba(255, 255, 255, 0.05);
+    color: #f4f4f4;
+}
+
+body.self-page .intro-text-block h2 {
+    color: #ffffff;
+}
+
+body.self-page .intro-text-block .role {
+    color: #f4f4f4;
+}
+
+body.self-page .btn-learn-more {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.self-page .btn-learn-more:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+body.self-page .cards-section h3 {
+    color: #ffffff;
+}
+
+body.self-page .info-card {
+    background: #111111;
+    border-color: #333333;
+    color: #f4f4f4;
+}
+
+body.self-page .info-card:hover,
+body.self-page .info-card.active {
+    border-color: #ffffff;
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.08);
+}
+
+body.self-page .card-summary h4 {
+    color: #ffffff;
+}
+
+body.self-page .card-summary p,
+body.self-page .card-detail p {
+    color: #dddddd;
+}
+
+body.self-page footer {
+    color: #bbbbbb;
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+
+body.detail-page {
+    background: #000;
+    color: #f4f4f4;
+}
+
+body.detail-page header {
+    background: transparent;
+    color: #f4f4f4;
+}
+
+body.detail-page .subtitle {
+    color: #cccccc;
+}
+
+body.detail-page .detail-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-decoration: none;
+    background: #111111;
+    border: 1px solid #2a2a2a;
+    padding: 30px;
+    border-radius: 24px;
+    box-shadow: var(--shadow-hover);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+body.detail-page .detail-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffffff;
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.08);
+}
+
+body.detail-page .detail-large {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+body.detail-page .detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+body.detail-page .detail-card h2,
+body.detail-page .detail-card h3 {
+    color: #ffffff;
+}
+
+body.detail-page .detail-card p {
+    color: #dcdcdc;
+    line-height: 1.8;
+}
+
+.card-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+}
+
+body.detail-page .btn-learn-more {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.detail-page .btn-learn-more:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .profile-card h2 {
+        font-size: 1.4em;
+    }
+
+    .intro-text {
+        font-size: 0.9em;
+    }
+}

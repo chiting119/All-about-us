@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophomore Year Activities</title>
+    <style>
+        /* 字體與整體風格設定 */
+        body {
+            font-family: "Segoe UI", Arial, "Microsoft JhengHei", sans-serif;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 40px 20px;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* 返回首頁連結 */
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: #4da3ff;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #4da3ff;
+            display: inline-block;
+            margin: 40px 0 20px 0;
+            font-size: 1.8rem;
+        }
+
+        /* 活動卡片容器 */
+        .activity-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        /* 圖片網格排版系統 */
+        .photo-grid {
+            display: grid;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .grid-1 {
+            display: block; /* 改為區塊模式 */
+            max-width: 60%; /* 設定最大寬度為 60%，你可以根據喜好改成 50% 或 70% */
+            margin: 0 auto 25px auto; /* 上下邊距、左右自動置中 */
+        }
+
+            .grid-1 .photo-box {
+                aspect-ratio: 4 / 3; /* 維持你想要的 4:3 比例 */
+                width: 100%;
+            }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .photo-box {
+            width: 100%;
+            background-color: #eee;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+            .photo-box img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        /* 藍色框框大標 */
+        .activity-label {
+            display: inline-block;
+            font-size: 2.0rem;
+            font-weight: bold;
+            border: none;
+            padding: 0;
+            margin-bottom: 15px;
+            color: #1a365d;
+            background: none;
+            font-family: "標楷體", DFKai-SB,serif;
+            letter-spacing: 4px;
+        }
+
+        /* 內文描述 */
+        .activity-desc {
+            text-align: left;
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 15px;
+            font-family: "標楷體", DFKai-SB,serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="All about us.html" class="back-btn">← Back to Journey</a>
+
+        <h1>My Sophomore Year Activities</h1>
+
+        <h2 class="section-title">班級活動</h2>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-1">
+                <div class="photo-box"><img src="dance.jpg" alt="班際舞蹈比賽"></div>
+            </div>
+            <div class="activity-label">班際舞蹈比賽</div>
+            <div class="activity-desc">
+                這是高二最重要的一項比賽，每個班級都要自行選擇歌曲並編排舞蹈。雖然準備過程中遇到了不少困難，最後也沒有得名，但大家都以輕鬆的心態面對，因此並不覺得難過 (甚至很開心 心態良好)
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-3">
+                <div class="photo-box"><img src="trip1.jpg" alt="畢旅1"></div>
+                <div class="photo-box"><img src="trip2.jpg" alt="畢旅2"></div>
+                <div class="photo-box"><img src="trip3.jpg" alt="畢旅3"></div>
+            </div>
+            <div class="activity-label">畢旅</div>
+            <div class="activity-desc">
+                畢旅是我最最最期待的活動，這次四天三夜的行程讓我們一路玩遍中南部的各個景點。在旅途中，我們不只是觀光，更是和同學一起創造回憶，從早到晚都充滿笑聲與驚喜，也努力把每一個瞬間都好好記錄下來，留下屬於我們的美好回憶
+            </div>
+        </div>
+
+        <h2 class="section-title">社團活動</h2>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-1">
+                <div class="photo-box"><img src="internal_welcome.jpg" alt="校內迎新"></div>
+            </div>
+            <div class="activity-label">校內迎新</div>
+            <div class="activity-desc">
+                以高二學長姐的身分帶著學弟妹一起參與活動，並且和校內其他社團一同合作與交流。在過程中不僅負責帶領與協助，也學習如何與不同年級的同學溝通配合，讓整個活動順利進行，同時也增進彼此之間的默契與情感
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-1">
+                <div class="photo-box"><img src="club_fair.jpg" alt="校慶擺攤"></div>
+            </div>
+            <div class="activity-label">校慶擺攤</div>
+            <div class="activity-desc">
+                高二這年的校慶擺攤是以社團為單位進行，我負責帶領學弟妹一起處理場地佈置的部分，包括討論整體風格以及規劃需要購買的佈置材料。在準備過程中，我們一起分工合作，讓攤位呈現出更完整且有一致性的設計風格
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-2">
+                <div class="photo-box"><img src="xmas_party1.jpg" alt="聖誕聚餐1"></div>
+                <div class="photo-box"><img src="xmas_party2.jpg" alt="聖誕聚餐2"></div>
+            </div>
+            <div class="activity-label">聖誕聚餐</div>
+            <div class="activity-desc">
+                臨近聖誕節時，我和另一位社團幹部一起負責籌備聖誕節相關活動。我們設計並安排了小天使小主人的遊戲，讓學弟妹在過程中互相留下驚喜與祝福，也舉辦了聖誕節交換禮物與聚餐活動，讓大家在輕鬆愉快的氛圍中一起度過溫馨的節日時光
+            </div>
+        </div>
+
+        <div class="activity-card">
+            <div class="photo-grid grid-1">
+                <div class="photo-box"><img src="winter_camp.jpg" alt="寒訓"></div>
+            </div>
+            <div class="activity-label">寒訓</div>
+            <div class="activity-desc">
+                社團利用寒假放假的時間到宜蘭住民宿，進行兩天一夜的活動，讓我們彼此之間的感情更加深厚。大家在民宿裡一起吃飯、一起唱歌、打麻將，在輕鬆自在的相處中，氣氛逐漸變得熱絡，整個夜晚都充滿歡笑與溫暖的交流
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
